@@ -1,53 +1,20 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #f7f4ee;
-  --foreground: #161513;
-  --muted: #6f6a62;
-  --line: rgba(22, 21, 19, 0.1);
+  --background: #ffffff;
+  --foreground: #18181b;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-source-serif);
-  --font-accent: var(--font-chakra-petch);
+html, body {
+  background-color: #ffffff !important;
+  color: #18181b;
+  margin: 0;
+  padding: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-serif), Georgia, serif;
-  line-height: 1.65;
-  text-rendering: optimizeLegibility;
-}
-
-a {
-  color: inherit;
-  text-underline-offset: 0.18em;
-}
-
-::selection {
-  background: rgba(22, 21, 19, 0.1);
-}
-
-.font-ui {
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-}
-
-.font-accent {
-  font-family: var(--font-accent), var(--font-sans), sans-serif;
-  letter-spacing: 0.14em;
-}
-
-.editorial-grid {
-  background-image:
-    linear-gradient(to right, transparent 0, transparent calc(50% - 1px), var(--line) calc(50% - 1px), var(--line) calc(50% + 1px), transparent calc(50% + 1px)),
-    linear-gradient(to bottom, rgba(22, 21, 19, 0.025), rgba(22, 21, 19, 0.025));
-  background-size: 100% 100%, 100% 1.75rem;
+/* Replicating the distinct, thin structural rules of Thinking Machines */
+hr, border-zinc-100 {
+  border-color: #f4f4f5 !important;
 }
